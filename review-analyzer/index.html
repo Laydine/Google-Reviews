@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze App Reviews</title>
+</head>
+<body>
+    <h1>Analyze App Reviews</h1>
+    <label for="appSelect">Select an app:</label>
+    <select id="appSelect">
+        <option value="">--Select an app--</option>
+    </select>
+    <button id="downloadNegativeReviews">Download Negative Reviews</button>
+    <p id="warning" style="color: rgb(24, 23, 29); display: none;">Please select an app before downloading!.</p>
+    <p id="noNegativeReview" style="color: rgb(153, 0, 255); display: none;">This app does not contain any negative reviews!.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchReviews();
+        });
+
+        async function fetchReviews() {
+            try {
+                const response = await fetch('reviews.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                const reviewsData = await response.json();
+                populateAppDropdown(reviewsData);
+            } catch (error) {
+                console.error('There has been a problem with your fetch operation:', error);
+            }
+        }
+
+        function populateAppDropdown(reviewsData) {
+            const appSelect = document.getElementById('appSelect');
+            const appNames = [...new Set(reviewsData.reviews.map(review => review.appName))];
+
+            appNames.forEach(appName => {
+                const option = document.createElement('option');
+                option.value = appName;
+                option.text = appName;
+                appSelect.add(option);
+            });
+
+            // Add event listener for dropdown change
+            appSelect.addEventListener('change', () => {
+                document.getElementById('warning').style.display = 'none';
+            });
+        }
+
+        async function analyzeReviews(selectedApp) {
+            if (!selectedApp) {
+                document.getElementById('warning').style.display = 'block';
+                return;
+            }
+
+            document.getElementById('warning').style.display = 'none';
+
+            try {
+                const response = await fetch('reviews.json');
+                const reviewsData = await response.json();
+
+                const selectedAppReviews = reviewsData.reviews.filter(review => review.appName === selectedApp);
+                const negativeReviews = selectedAppReviews.filter(review => {
+                    return review.comments.some(comment => comment.userComment && comment.userComment.starRating < 3);
+                });
+
+                if (negativeReviews.length === 0) {
+                    document.getElementById('noNegativeReview').style.display = 'block';
+                    return;
+                }
+
+                document.getElementById('noNegativeReview').style.display = 'none';
+
+                const csvContent = reviewsToCsv(negativeReviews);
+                downloadCsv(csvContent, selectedApp, 'negative');
+            } catch (error) {
+                console.error('Error analyzing reviews:', error);
+            }
+        }
+
+        function reviewsToCsv(reviews) {
+            const csvRows = ['Review ID,Author Name,User Comment,Star Rating,Developer Comment,Last Modified'];
+            reviews.forEach(review => {
+                let userCommentText = '';
+                let starRating = '';
+                let lastModified = '';
+                let developerCommentText = '';
+
+                review.comments.forEach(comment => {
+                    if (comment.userComment) {
+                        userCommentText = comment.userComment.text;
+                        starRating = comment.userComment.starRating;
+                        lastModified = new Date(comment.userComment.lastModified.seconds * 1000).toLocaleString();
+                    }
+                    if (comment.developerComment) {
+                        developerCommentText = comment.developerComment.text;
+                    }
+                });
+
+                csvRows.push([
+                    review.reviewId,
+                    review.authorName,
+                    userCommentText,
+                    starRating,
+                    developerCommentText,
+                    lastModified
+                ].join(','));
+            });
+            return csvRows.join('\n');
+        }
+
+        function downloadCsv(csvContent, fileName, reviewType) {
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            
+            let fileType = reviewType === 'positive' ? 'Positive' : 'Negative';
+            fileName = `${fileName}_${fileType}_reviews.csv`;
+
+            link.setAttribute('href', url);
+            link.setAttribute('download', fileName);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.getElementById('downloadNegativeReviews').addEventListener('click', () => {
+            const selectedApp = document.getElementById('appSelect').value;
+            analyzeReviews(selectedApp);
+        });
+    </script>
+</body>
+</html>

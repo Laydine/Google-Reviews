@@ -1,0 +1,527 @@
+{
+  "reviews": [
+    {
+      "reviewId": "r1",
+      "authorName": "Riziki",
+      "appName": "Extreme Poland",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Not happy with the latest update.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 2
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're sorry to hear that. Please let us know what issues you are facing.",
+            "lastModified": {
+              "seconds": "1623676827",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r2",
+      "authorName": "Kym",
+      "appName": "Foody",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Crashes frequently on my phone.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 1
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We apologize for the inconvenience. We're working on a fix.",
+            "lastModified": {
+              "seconds": "1623676828",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r5",
+      "authorName": "Ken",
+      "appName": "24 FLIX",
+      "comments": [
+        {
+          "userComment": {
+            "text": "The app is good, but the customer service is poor.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 2
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're sorry to hear about your experience. We're here to help.",
+            "lastModified": {
+              "seconds": "1623676831",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r21",
+      "authorName": "Mark",
+      "appName": "Made It Myself TV",
+      "comments": [
+        {
+          "userComment": {
+            "text": "App keeps freezing.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 1
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Sorry for the trouble. We're looking into it.",
+            "lastModified": {
+              "seconds": "1623676847",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r22",
+      "authorName": "Bella",
+      "appName": "Ikoflix",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Too many ads. Very annoying.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 1
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We apologize for the inconvenience. We're working on reducing the ads.",
+            "lastModified": {
+              "seconds": "1623676848",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r23",
+      "authorName": "Charlie",
+      "appName": "Indiebox",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Glitches frequently and it's frustrating.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 2
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're sorry to hear that. We're working on a fix.",
+            "lastModified": {
+              "seconds": "1623676849",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r24",
+      "authorName": "Nina",
+      "appName": "Games Tips&Tricks",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Content is outdated.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 2
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you for your feedback. We're updating our content soon.",
+            "lastModified": {
+              "seconds": "1623676850",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r25",
+      "authorName": "Henry",
+      "appName": "VeePN",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Connection drops often.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 1
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're sorry to hear that. We're working on improving our service.",
+            "lastModified": {
+              "seconds": "1623676851",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r26",
+      "authorName": "Grace",
+      "appName": "Zafaa TV",
+      "comments": [
+        {
+          "userComment": {
+            "text": "App is slow and crashes.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 1
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're sorry for the inconvenience. We're working on a fix.",
+            "lastModified": {
+              "seconds": "1623676852",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r28",
+      "authorName": "Chloe",
+      "appName": "Nollywood Capital",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Payment failed multiple times.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 1
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're sorry for the inconvenience. Please contact support for assistance.",
+            "lastModified": {
+              "seconds": "1623676854",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r4",
+      "authorName": "Racheal",
+      "appName": "fashionTv",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Love the new design!",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Glad you like it!",
+            "lastModified": {
+              "seconds": "1623676830",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r6",
+      "authorName": "Aisha",
+      "appName": "BLOOM Wellness Channel",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Absolutely love the filters!",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you for your feedback!",
+            "lastModified": {
+              "seconds": "1623676832",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r7",
+      "authorName": "Lena",
+      "appName": "OVW WRESTLING",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Helps me keep track of my workouts efficiently.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you for your review!",
+            "lastModified": {
+              "seconds": "1623676833",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r8",
+      "authorName": "James",
+      "appName": "Cool School",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Fast and reliable transactions every time.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you for your feedback!",
+            "lastModified": {
+              "seconds": "1623676834",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r9",
+      "authorName": "Emma",
+      "appName": "High Octane TV",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Fantastic game with great graphics!",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're glad you enjoy the game!",
+            "lastModified": {
+              "seconds": "1623676835",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r10",
+      "authorName": "Sophia",
+      "appName": "Unreel",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Perfect companion for my studies.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're happy to hear that!",
+            "lastModified": {
+              "seconds": "1623676836",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r11",
+      "authorName": "Lucas",
+      "appName": "Todazon",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Accurate and easy to use.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you for your review!",
+            "lastModified": {
+              "seconds": "1623676837",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r12",
+      "authorName": "Ava",
+      "appName": "Extreme+",
+      "comments": [
+        {
+          "userComment": {
+            "text": "The best fitness app I've ever used.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "We're thrilled to hear that!",
+            "lastModified": {
+              "seconds": "1623676838",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r13",
+      "authorName": "Mia",
+      "appName": "Real Music TV",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Amazing collection of books.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you! We're glad you like it.",
+            "lastModified": {
+              "seconds": "1623676839",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "r14",
+      "authorName": "Noah",
+      "appName": "Auto Allstars",
+      "comments": [
+        {
+          "userComment": {
+            "text": "A must-have app for travelers.",
+            "lastModified": {
+              "seconds": "1623676826",
+              "nanos": 713000000
+            },
+            "starRating": 5
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you for your review!",
+            "lastModified": {
+              "seconds": "1623676840",
+              "nanos": 713000000
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "tokenPagination": {
+    "nextPageToken": "12334566"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "code": "^5.2.4",
+    "runner": "^4.0.1"
+  }
+}

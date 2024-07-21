@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Reviews</title>
+</head>
+<body>
+    <h1>Fetch Reviews</h1>
+    <input type="text" id="packageNameInput" placeholder="Enter package name">
+    <button id="fetchReviewsBtn">Fetch Reviews</button>
+    <div id="reviewsContainer"></div>
+
+    <script>
+        document.getElementById('fetchReviewsBtn').addEventListener('click', () => {
+            const packageName = document.getElementById('packageNameInput').value;
+            const url = `http://localhost:5501/reviews?packageName=${encodeURIComponent(packageName)}`;
+            console.log('Fetching reviews from:', url);
+
+            fetch(url, {
+                method: 'GET',
+                mode: 'cors',
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(reviews => {
+                console.log('Fetched reviews:', reviews); // Log reviews for debugging
+
+                const reviewsContainer = document.getElementById('reviewsContainer');
+                reviewsContainer.innerHTML = ''; // Clear previous content
+
+                if (reviews && reviews.length > 0) {
+                    // Create the table
+                    const table = document.createElement('table');
+                    const thead = document.createElement('thead');
+                    const tbody = document.createElement('tbody');
+
+                    // Create and append table headers
+                    const headerRow = document.createElement('tr');
+                    const ratingHeader = document.createElement('th');
+                    const textHeader = document.createElement('th');
+
+                    ratingHeader.textContent = 'Star Rating';
+                    textHeader.textContent = 'Text';
+
+                    headerRow.appendChild(ratingHeader);
+                    headerRow.appendChild(textHeader);
+                    thead.appendChild(headerRow);
+                    table.appendChild(thead);
+
+                    // Append table rows with reviews
+                    reviews.forEach(review => {
+                        review.comments.forEach(comment => {
+                            console.log('Comment:', comment); // Debug log for the entire comment object
+
+                            const starRating = comment.userComment.starRating || 'No rating';
+                            const text = comment.userComment.text || 'No text';
+
+                            const row = document.createElement('tr');
+                            const ratingCell = document.createElement('td');
+                            const textCell = document.createElement('td');
+
+                            ratingCell.textContent = starRating;
+                            textCell.textContent = text;
+
+                            row.appendChild(ratingCell);
+                            row.appendChild(textCell);
+                            tbody.appendChild(row);
+
+                            console.log('Star Rating:', starRating); // Debug log for star rating
+                            console.log('text:', text); // Debug log for  text
+                        });
+                    });
+
+                    table.appendChild(tbody);
+                    reviewsContainer.appendChild(table);
+                } else {
+                    reviewsContainer.innerHTML = 'No reviews found.';
+                }
+            })
+            .catch(error => console.error('Error fetching reviews:', error));
+        });
+    </script>
+</body>
+</html>
